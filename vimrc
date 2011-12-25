@@ -67,6 +67,9 @@ set mouse=a                     " enable using the mouse if terminal emulator
 set fileformats="unix,dos,mac"
 set formatoptions+=1            " When wrapping paragraphs, don't end lines
                                 "    with 1-letter words (looks stupid)
+set relativenumber              " Use relative line number instead of absolute
+                                "    line number
+set colorcolumn=85              " Tells me when a line gets too looong
 
 " Thanks to Steve Losh for this liberating tip
 " See http://stevelosh.com/blog/2010/09/coming-home-to-vim
@@ -201,10 +204,10 @@ nnoremap ' `
 nnoremap ` '
 
 " Use the damn hjkl keys
-" map <up> <nop>
-" map <down> <nop>
-" map <left> <nop>
-" map <right> <nop>
+map <up> <nop>
+map <down> <nop>
+map <left> <nop>
+map <right> <nop>
 
 " Remap j and k to act as expected when used on long, wrapped, lines
 nnoremap j gj
@@ -293,6 +296,9 @@ nnoremap <leader>v V`]
 
 " Gundo.vim
 nnoremap <F5> :GundoToggle<CR>
+
+" Auto save file when focus lost
+au FocusLost * :wa
 " }}}
 
 " NERDTree settings {{{
