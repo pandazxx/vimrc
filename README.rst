@@ -38,7 +38,7 @@ like it.  To do so, please do the following:
 
    	ln -s ~/path/to/vimrc/vim ~/.vim
 
-    or
+    or::
 
    	cp -r ~/path/to/vimrc/vim ~/.vim
 
